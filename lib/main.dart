@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:social_message/share_message_use_case.dart';
 
 void main() {
@@ -32,6 +33,8 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
+  static const platform = MethodChannel('com.flamyoad.sharemessage');
+
   late ShareMessageUseCase shareMessageUseCase;
 
   late TextEditingController textEditingController;
@@ -39,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    shareMessageUseCase = ShareMessageUseCaseImpl();
+    shareMessageUseCase = ShareMessageUseCaseImpl(platform);
     textEditingController = TextEditingController();
   }
 

@@ -2,10 +2,13 @@ import 'package:flutter/services.dart';
 
 abstract class ShareMessageUseCase {
   void shareMessage(String message);
+  void shareImage();
 }
 
 class ShareMessageUseCaseImpl implements ShareMessageUseCase {
-  static const platform = MethodChannel('com.flamyoad.sharemessage');
+  final MethodChannel platform;
+
+  ShareMessageUseCaseImpl(this.platform);
 
   @override
   void shareMessage(String message) {
@@ -14,5 +17,10 @@ class ShareMessageUseCaseImpl implements ShareMessageUseCase {
     } on PlatformException catch (e) {
       // no-op
     }
+  }
+
+  @override
+  void shareImage() {
+    // TODO: implement shareImage
   }
 }
