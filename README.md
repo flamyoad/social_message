@@ -1,16 +1,8 @@
-# social_message
+Android
+- Via `Intent`
+- https://faq.whatsapp.com/511210730860677/?cms_platform=android
 
-social_message
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+iOS
+- Via `UIActivityViewController`
+- https://faq.whatsapp.com/425247423114725/?locale=en_US&cms_platform=iphone
+- Need to find out how to present a vc in AppDelegate without using hacky way.
